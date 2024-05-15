@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Edit Your BLOG</title>
+    <link rel="stylesheet" href="/new.css">
+</head>
+
+<body>
+    <h2>Edit Your blog</h2>
+    <p>Post id:
+        <%= post.id %>
+    </p>
+    <p>Username:
+        <%= post.username %>
+    </p>
+    <form method="post" action="/posts/<%=post.id%>?_method=PATCH">
+        <textarea name="content" cols="30" rows="5" name="content"><%= post.content %></textarea>
+        <button type="submit">Submit</button>
+    </form>
+</body>
+
+</html>
